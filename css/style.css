@@ -1,0 +1,328 @@
+html {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #2E3440;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: #2E3440;
+}
+
+main {
+  padding: 40px 0;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grey-wrapper {
+  background-color: #F5F5F5;
+  padding: 40px 0;
+}
+
+.header {
+  min-height: 400px;
+  background-color: black;
+  background-image: linear-gradient(to bottom, rgba(46, 52, 64, 0.5), rgba(46, 52, 64, 0.5)), url(/images/klice.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 50px;
+}
+.header__headline {
+  text-transform: uppercase;
+  color: #F6C441;
+  font-size: 48px;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 5px 5px 10px black;
+  display: inline-block;
+  margin: 0 50px 0 0;
+}
+.header__logo {
+  height: 320px;
+}
+
+nav {
+  background-color: #2E3440;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.menu {
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.menu__item {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 14px 0 20px 0;
+  border-top: 6px solid transparent;
+}
+.menu__item:hover, .menu__item:focus {
+  border-top: 6px solid #F6C441;
+  color: inherit;
+}
+
+.button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #F6C441;
+  border: 0;
+  padding: 10px 30px 10px 20px;
+  color: #4D3A1E;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 7px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+.button::after {
+  content: ">";
+  transition: all 0.2s ease-out;
+  position: absolute;
+  right: 16px;
+}
+.button:hover {
+  background-color: #2E3440;
+  color: white;
+  padding-left: 20px;
+}
+.button:hover::after {
+  content: ">";
+  position: absolute;
+  right: 12px;
+}
+.button--newsbox {
+  background: none;
+  box-shadow: none;
+  padding: 0 30px 15px 0;
+  align-self: flex-end;
+}
+.button--newsbox:hover {
+  background: none;
+  box-shadow: none;
+  color: #4D3A1E;
+  padding-left: 0;
+}
+
+.homepage-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 20px 40px 20px;
+}
+
+.homepage-box {
+  background-color: black;
+  background-image: url(/images/klice-male.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 280px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  position: relative;
+}
+.homepage-box__title {
+  color: #4D3A1E;
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.5;
+  transition: padding-top 0.3s ease-out;
+}
+.homepage-box__content {
+  background-color: rgba(246, 196, 65, 0.9);
+  padding: 20px 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  transition: height 0.3s ease-out;
+}
+.homepage-box:hover .homepage-box__title {
+  padding-top: 78px;
+}
+.homepage-box:hover .homepage-box__content {
+  height: 100%;
+}
+
+.homepage-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.homepage-about__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.homepage-news__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+.homepage-news__title {
+  margin: 0;
+}
+
+.homepage-news-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.news-box {
+  background-color: white;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.news-box__date {
+  background-color: #2E3440;
+  color: white;
+  margin: 0;
+  height: 45px;
+  padding: 15px;
+}
+.news-box__titlebox {
+  height: 90px;
+  background-color: #F6C441;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+.news-box__title {
+  color: #4D3A1E;
+  margin: 0;
+  line-height: 1.2;
+}
+.news-box__perex {
+  margin: 15px;
+}
+.news-box__content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 135px);
+  justify-content: space-between;
+}
+
+.homepage-partners {
+  padding-top: 40px;
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.slide img {
+  width: 100%;
+}
+
+.footer-background-1 {
+  background-color: #EBEBEB;
+  padding: 30px 0 20px 0;
+}
+
+.footer-up {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+  gap: 30px;
+}
+.footer-up img {
+  max-height: 250px;
+}
+.footer-up__navigation a {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-up__asociation-title {
+  color: #4D3A1E;
+  font-weight: 600;
+}
+
+.footer-background-2 {
+  background-color: #2E3440;
+  color: white;
+  padding: 20px 0;
+}
+.footer-background-2 p {
+  margin: 0;
+  font-size: 14px;
+}
+.footer-background-2 a {
+  color: inherit;
+}
+.footer-background-2 a:hover {
+  color: #F6C441;
+}
+
+.footer-down {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=style.css.map */

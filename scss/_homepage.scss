@@ -1,0 +1,146 @@
+@use 'promenne';
+
+// 4 boxy s hlavními činnostmi
+
+.homepage-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px 40px 20px;
+}
+
+.homepage-box {
+    background-color: black;
+    background-image: url(/images/klice-male.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 280px;
+    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
+    text-decoration: none;
+    position: relative;
+
+    &__title {
+        color: promenne.$c-vedlejsi;
+        padding: 0;
+        margin: 0;
+        font-size: 32px;
+        line-height: 1.5;
+        transition: padding-top 0.3s ease-out;
+    }
+
+    &__content {
+        background-color: rgba($color: promenne.$c-hlavni, $alpha: 0.9);
+        padding: 20px 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        transition: height 0.3s ease-out;
+    }
+
+    &:hover {
+        .homepage-box__title {
+           padding-top: 78px;
+        }
+
+        .homepage-box__content {
+            height: 100%;
+        }
+    }
+}
+
+// O asociaci
+
+.homepage-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+// Aktuality
+
+.homepage-news {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        margin: 0;
+    }
+}
+
+.homepage-news-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.news-box {
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
+
+    &__date {
+        background-color: promenne.$c-tmavaseda;
+        color: white;
+        margin: 0;
+        height: 45px;
+        padding: 15px;
+    }
+
+    &__titlebox {
+        height: 90px;
+        background-color: promenne.$c-hlavni;
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+    }
+    
+    &__title {
+        color: promenne.$c-vedlejsi;
+        margin: 0;
+        line-height: 1.2;
+        
+    }
+
+    &__perex {
+        margin: 15px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 135px);
+        justify-content: space-between;
+    }
+}
+
+// Čestní členové
+
+.homepage-partners {
+    padding-top: 40px;
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+}

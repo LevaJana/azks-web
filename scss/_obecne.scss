@@ -1,0 +1,63 @@
+@use 'promenne';
+
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+    font-family: promenne.$font-hlavni;
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: promenne.$font-vedlejsi;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: promenne.$c-tmavaseda;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+a {
+    color: inherit;
+
+    &:hover {
+        color: promenne.$c-tmavaseda;
+    }
+}
+
+main {
+    padding: 40px 0;
+}
+
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;  
+}
+
+.grey-wrapper {
+        background-color: promenne.$c-pozadisvetlost1;
+        padding: 40px 0;
+    }

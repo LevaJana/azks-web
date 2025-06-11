@@ -1,0 +1,50 @@
+@use 'promenne';
+
+.button {
+    font-family: promenne.$font-hlavni;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: promenne.$c-hlavni;
+    border: 0;
+    padding: 10px 30px 10px 20px;
+    color: promenne.$c-vedlejsi;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 7px;
+    box-shadow: 3px 3px 4px rgba($color: #000000, $alpha: 0.25);
+    transition: all 0.2s ease-out;
+    position: relative;
+
+    &::after {
+            content: ">";
+            transition: all 0.2s ease-out;
+            position: absolute;
+            right: 16px;
+        }
+
+    &:hover {
+        background-color: promenne.$c-tmavaseda;
+        color: white;
+        padding-left: 20px;
+
+        &::after {
+            content: ">";
+            position: absolute;
+            right: 12px;
+        }
+    }
+
+    &--newsbox {
+        background: none;
+        box-shadow: none;
+        padding: 0 30px 15px 0;
+        align-self: flex-end;
+        
+        &:hover {
+            background: none;
+            box-shadow: none;
+            color: promenne.$c-vedlejsi;
+            padding-left: 0;
+        }
+    }
+}
