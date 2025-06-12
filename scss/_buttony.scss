@@ -10,7 +10,7 @@
     color: promenne.$c-vedlejsi;
     text-decoration: none;
     display: inline-block;
-    border-radius: 7px;
+    border-radius: 40px;
     box-shadow: 3px 3px 4px rgba($color: #000000, $alpha: 0.25);
     transition: all 0.2s ease-out;
     position: relative;
@@ -46,5 +46,11 @@
             color: promenne.$c-vedlejsi;
             padding-left: 0;
         }
+    }
+
+    &--newspage {
+        display: block;
+        width: fit-content;
+        margin: 50px 0 20px auto;
     }
 }

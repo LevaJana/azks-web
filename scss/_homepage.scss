@@ -68,65 +68,7 @@
 
 
 
-// Aktuality
 
-.homepage-news {
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 25px;
-    }
-
-    &__title {
-        margin: 0;
-    }
-}
-
-.homepage-news-boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.news-box {
-    background-color: white;
-    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
-
-    &__date {
-        background-color: promenne.$c-tmavaseda;
-        color: white;
-        margin: 0;
-        height: 45px;
-        padding: 15px;
-    }
-
-    &__titlebox {
-        height: 90px;
-        background-color: promenne.$c-hlavni;
-        display: flex;
-        align-items: center;
-        padding: 10px 15px;
-    }
-    
-    &__title {
-        color: promenne.$c-vedlejsi;
-        margin: 0;
-        line-height: 1.2;
-        
-    }
-
-    &__perex {
-        margin: 15px;
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        height: calc(100% - 135px);
-        justify-content: space-between;
-    }
-}
 
 // Čestní členové
 
