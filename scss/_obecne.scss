@@ -11,6 +11,12 @@ body {
     margin: 0;
 }
 
+.pagewrapper {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
 h1, h2, h3, h4 {
     font-family: promenne.$font-vedlejsi;
     font-weight: 400;
@@ -39,6 +45,21 @@ h4 {
     margin-bottom: 16px;
 }
 
+.underline {
+         &::after {
+            content: "";
+            width: 2.2em;
+            height: 2px;
+            display: block;
+            background-color: promenne.$c-svetlaseda;
+            margin-top: 0.5em;
+        }
+    }
+
+.topmargin50 {
+    margin-top: 50px;
+}
+
 a {
     color: inherit;
 
@@ -54,10 +75,35 @@ main {
 .section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;  
+    padding: 0 20px;
+    
+    &--toppadding {
+        padding-top: 35px;
+    }
 }
 
 .grey-wrapper {
-        background-color: promenne.$c-pozadisvetlost1;
-        padding: 40px 0;
+    background-color: promenne.$c-pozadisvetlost1;
+    padding: 40px 0;
+}
+
+.headline-wrapper {
+    background-color: promenne.$c-hlavni;
+    padding: 20px 0;
+    position: relative;
+
+    h2 {
+        color: promenne.$c-vedlejsi;
+        margin: 0;
     }
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    &--g40 {
+        gap: 40px;
+    }
+}

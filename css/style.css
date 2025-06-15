@@ -14,6 +14,12 @@ body {
   margin: 0;
 }
 
+.pagewrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
 h1, h2, h3, h4 {
   font-family: "Anton", sans-serif;
   font-weight: 400;
@@ -42,6 +48,19 @@ h4 {
   margin-bottom: 16px;
 }
 
+.underline::after {
+  content: "";
+  width: 2.2em;
+  height: 2px;
+  display: block;
+  background-color: #C1BFD1;
+  margin-top: 0.5em;
+}
+
+.topmargin50 {
+  margin-top: 50px;
+}
+
 a {
   color: inherit;
 }
@@ -58,10 +77,32 @@ main {
   margin: 0 auto;
   padding: 0 20px;
 }
+.section--toppadding {
+  padding-top: 35px;
+}
 
 .grey-wrapper {
   background-color: #F5F5F5;
   padding: 40px 0;
+}
+
+.headline-wrapper {
+  background-color: #F6C441;
+  padding: 20px 0;
+  position: relative;
+}
+.headline-wrapper h2 {
+  color: #4D3A1E;
+  margin: 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.grid-2--g40 {
+  gap: 40px;
 }
 
 .header {
@@ -87,6 +128,34 @@ main {
 }
 .header__logo {
   height: 320px;
+}
+.header--basic {
+  min-height: 110px;
+  padding: 0;
+  background-image: none;
+  background-color: #4D3A1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header--basic .header__headline {
+  font-size: 30px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  margin-right: 0;
+  position: relative;
+  top: 10px;
+}
+.header--basic .header__br {
+  display: none;
+}
+.header--basic .header__logo {
+  height: 75px;
+}
+.header--basic .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 nav {
@@ -228,6 +297,54 @@ nav {
   width: -moz-fit-content;
   width: fit-content;
   margin: 50px 0 20px auto;
+}
+.button--back {
+  padding: 10px 20px 10px 30px;
+}
+.button--back::after {
+  content: none;
+}
+.button--back::before {
+  content: "<";
+  transition: all 0.2s ease-out;
+  position: absolute;
+  left: 16px;
+}
+.button--back:hover {
+  background-color: #2E3440;
+  color: white;
+  padding-left: 30px;
+}
+.button--back:hover::after {
+  content: none;
+}
+.button--back:hover::before {
+  content: "<";
+  position: absolute;
+  left: 12px;
+}
+.button--article {
+  margin-left: auto;
+  margin-top: 40px;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+}
+.button--form {
+  margin-left: auto;
+  margin-top: 20px;
+  display: block;
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+}
+.button--form::after {
+  content: none;
+}
+.button--form:hover {
+  padding: 5px 15px 5px 15px;
+}
+.button--form:hover::after {
+  content: none;
 }
 
 .homepage-boxes {
@@ -383,6 +500,109 @@ nav {
 .news-box--big .news-box__content {
   height: 100%;
   padding: 5px 0 5px 5px;
+}
+
+.article-head {
+  position: relative;
+}
+.article-head h2 {
+  margin-right: 230px;
+}
+
+.article-info {
+  background-color: #2E3440;
+  position: absolute;
+  right: 20px;
+  top: -60px;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 200px;
+}
+.article-info__date {
+  font-size: 24px;
+}
+.article-info__autor {
+  font-size: 14px;
+}
+
+.article {
+  padding-top: 50px;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  -moz-column-rule: 1px solid #C1BFD1;
+       column-rule: 1px solid #C1BFD1;
+}
+.article__foto {
+  width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article__text {
+  max-width: 800px;
+}
+
+.form {
+  background-color: #EBEBEB;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form h3 {
+  background-color: #2E3440;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+.form__formular {
+  padding: 20px;
+}
+.form__pole {
+  margin-bottom: 20px;
+}
+.form__pole label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form__pole input, .form__pole textarea {
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: 0;
+  border-top: 4px solid #F6C441;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.form__pole textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-thanks {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.form-thanks p {
+  margin: 30px 0;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table td, .table th {
+  text-align: left;
+  padding: 7px 10px;
+}
+.table tbody {
+  font-size: 14px;
+}
+.table tbody tr:nth-child(odd) {
+  background-color: rgba(246, 196, 65, 0.25);
 }
 
 .footer-background-1 {

@@ -1,0 +1,22 @@
+@use 'promenne';
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    
+
+    td, th {
+        text-align: left;
+        padding: 7px 10px;
+    }
+
+    tbody {
+        font-size: 14px;
+
+        tr:nth-child(odd) {
+            background-color: rgba($color: promenne.$c-hlavni, $alpha: 0.25) ;
+        }
+    }
+
+    
+}

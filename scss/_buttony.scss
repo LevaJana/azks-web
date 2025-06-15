@@ -53,4 +53,61 @@
         width: fit-content;
         margin: 50px 0 20px auto;
     }
+
+    &--back {
+        padding: 10px 20px 10px 30px;
+
+        &::after {
+            content: none;
+        }
+
+        &::before {
+            content: "<";
+            transition: all 0.2s ease-out;
+            position: absolute;
+            left: 16px;
+        }
+
+        &:hover {
+            background-color: promenne.$c-tmavaseda;
+            color: white;
+            padding-left: 30px;
+
+            &::after {
+                content: none;
+            }
+
+            &::before {
+                content: "<";
+                position: absolute;
+                left: 12px;
+            }
+        }
+    }
+
+    &--article {
+        margin-left: auto;
+        margin-top: 40px;
+        display: block;
+        width: max-content;
+    }
+
+    &--form {
+        margin-left: auto;
+        margin-top: 20px;
+        display: block;
+        padding: 5px 15px 5px 15px;
+        cursor: pointer;
+
+        &::after {
+            content: none;
+        }
+
+        &:hover {
+            padding: 5px 15px 5px 15px;
+            &::after {
+                content: none;
+            }
+        }
+    }
 }
