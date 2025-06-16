@@ -111,6 +111,25 @@
             }
         }
     }
+
+    &--zamkar {
+        text-align: center;
+
+        h2 {
+            background-color: promenne.$c-hlavni;
+            color: promenne.$c-vedlejsi;
+            padding: 15px 20px 10px 20px;
+            margin-bottom: 0;
+        }
+
+        p {
+            background-color: promenne.$c-tmavaseda;
+            color: white;
+            padding: 10px 20px;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
 }
 
 .form-thanks {

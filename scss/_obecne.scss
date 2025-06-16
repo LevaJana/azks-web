@@ -89,6 +89,11 @@ main {
 .grey-wrapper {
     background-color: promenne.$c-pozadisvetlost1;
     padding: 40px 0;
+
+    &--small {
+        padding: 30px 20px 20px 20px;
+        margin-top: 30px;
+    }
 }
 
 .headline-wrapper {
@@ -113,5 +118,9 @@ main {
 
     img {
         width: 100%;
+    }
+
+    &--zamkar {
+        grid-template-columns: 3fr 2fr;
     }
 }

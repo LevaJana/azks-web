@@ -89,6 +89,10 @@ main {
   background-color: #F5F5F5;
   padding: 40px 0;
 }
+.grey-wrapper--small {
+  padding: 30px 20px 20px 20px;
+  margin-top: 30px;
+}
 
 .headline-wrapper {
   background-color: #F6C441;
@@ -110,6 +114,9 @@ main {
 }
 .grid-2 img {
   width: 100%;
+}
+.grid-2--zamkar {
+  grid-template-columns: 3fr 2fr;
 }
 
 .header {
@@ -671,6 +678,22 @@ nav {
 }
 .form--download .form__contain p {
   margin: 0;
+}
+.form--zamkar {
+  text-align: center;
+}
+.form--zamkar h2 {
+  background-color: #F6C441;
+  color: #4D3A1E;
+  padding: 15px 20px 10px 20px;
+  margin-bottom: 0;
+}
+.form--zamkar p {
+  background-color: #2E3440;
+  color: white;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 20px;
 }
 
 .form-thanks {
