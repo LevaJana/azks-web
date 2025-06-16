@@ -40,6 +40,10 @@ h3 {
     margin-bottom: 16px;
 }
 
+.h3--basic {
+        margin-top: 40px;
+    }
+
 h4 {
     font-size: 20px;
     margin-bottom: 16px;
@@ -105,5 +109,9 @@ main {
 
     &--g40 {
         gap: 40px;
+    }
+
+    img {
+        width: 100%;
     }
 }

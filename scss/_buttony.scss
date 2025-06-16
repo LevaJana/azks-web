@@ -96,6 +96,7 @@
         margin-left: auto;
         margin-top: 20px;
         display: block;
+        width: max-content;
         padding: 5px 15px 5px 15px;
         cursor: pointer;
 
@@ -110,4 +111,34 @@
             }
         }
     }
+
+    &--oazks {
+        display: block;
+        width: max-content;
+        margin: 10px 20px 0 auto;
+    }
+
+    &--download {
+        margin: 20px auto 0 auto;
+        padding: 10px 15px;
+
+            #arrow {
+                transform: translateY(0px);
+                transition: transform 0.5s;
+            }
+
+        &:hover {
+            padding: 10px 15px;
+            color: white;
+            
+            #arrow {
+                transform: translateY(1.1px);
+            }
+        }
+    }
+
+    &__icon {
+        margin-left: 7px;
+    }
 }
+

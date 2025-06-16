@@ -1,7 +1,7 @@
 @use 'promenne';
 
 .form {
-    background-color: promenne.$c-pozadisvetlost2;
+    background-color: promenne.$c-pozadisvetlost1;
     box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
 
     h3 {
@@ -40,6 +40,76 @@
             resize: vertical;
         }
 
+    }
+
+    &--oazks {
+        margin-top: 40px;
+        padding-bottom: 20px;
+        
+        h3 {
+            background-color: promenne.$c-hlavni;
+            color: promenne.$c-vedlejsi;
+            padding: 15px 20px;
+        }
+        
+        h4 {
+            background-color: promenne.$c-tmavaseda;
+            color: white;
+            padding: 15px 20px;
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 20px;
+            padding-left: 38px;
+            font-size: 14px;
+        }
+
+        li {
+            /* margin: 0;
+            padding: 0; */
+        }
+    }
+
+    &--download {
+
+        display: flex;
+        flex-direction: column;
+        
+        .form__head {
+            display: flex;
+
+            h2 {
+            background-color: promenne.$c-hlavni;
+            color: promenne.$c-vedlejsi;
+            padding: 10px 20px;
+            margin: 0;
+            flex-grow: 1;
+            }
+
+            p {
+                background-color: promenne.$c-tmavaseda;
+                color: white;
+                padding: 10px 20px;
+                font-size: 30px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .form__contain {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+
+            p {
+                margin: 0;
+            }
+        }
     }
 }
 
