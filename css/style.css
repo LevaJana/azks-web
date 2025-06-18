@@ -149,6 +149,23 @@ main {
   text-align: center;
 }
 
+.mapacr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mapacr svg {
+  width: 100%;
+  padding-left: 20px;
+}
+.mapacr svg .kraj {
+  stroke-width: 5px;
+  stroke: #F5F5F5;
+}
+.mapacr svg .kraj:hover, .mapacr svg .kraj:focus {
+  fill: #F6C441;
+}
+
 .header {
   min-height: 400px;
   background-color: black;
@@ -443,6 +460,13 @@ nav {
   right: 14px;
   top: 10px;
 }
+.button--members {
+  padding: 10px 20px;
+  margin: 40px auto;
+}
+.button--members:hover {
+  padding: 10px 20px;
+}
 
 .homepage-boxes {
   display: grid;
@@ -663,27 +687,123 @@ nav {
 .form__formular {
   padding: 20px;
 }
+.form__formular--members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 .form__pole {
   margin-bottom: 20px;
 }
 .form__pole label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-.form__pole input, .form__pole textarea {
+.form__pole input, .form__pole textarea, .form__pole select {
   display: block;
   width: 100%;
   background-color: white;
   border: 0;
   border-top: 4px solid #F6C441;
   padding: 10px;
+  border-radius: 0;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
+.form__pole select, .form__pole ::picker(select) {
+  -webkit-appearance: base-select;
+     -moz-appearance: base-select;
+          appearance: base-select;
+}
+.form__pole ::picker(select) {
+  border: none;
+}
+.form__pole select {
+  padding: 12px;
+}
+.form__pole select::picker-icon {
+  color: #F6C441;
+  transition: 0.4s rotate;
+}
+.form__pole select:open::picker-icon {
+  rotate: 180deg;
+}
+.form__pole option:hover, .form__pole option:focus {
+  background-color: #F6C441;
+}
 .form__pole textarea {
   min-height: 120px;
   resize: vertical;
+}
+.form__pole--radio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  font-size: 14px;
+}
+.form__pole--radio .radioinput {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.form__pole--radio .radioinput input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form__pole--radio .radioinput:hover input ~ .checkmark {
+  background-color: rgba(246, 196, 65, 0.25);
+}
+.form__pole--radio .radioinput input:checked ~ .checkmark {
+  background-color: #F6C441;
+}
+.form__pole--radio .radioinput input:checked ~ .checkmark:after {
+  display: block;
+}
+.form__pole--radio .radioinput .checkmark:after {
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4D3A1E;
+}
+.form__pole--radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid #F6C441;
+}
+.form__pole--radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form__pole--checkbox .checkmark {
+  border-radius: 0;
+}
+.form__pole--checkbox .radioinput .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 7px;
+  height: 12px;
+  border: solid #4D3A1E;
+  background-color: transparent;
+  border-width: 0 3px 3px 0;
+  border-radius: 0;
+  transform: rotate(45deg);
 }
 .form--oazks {
   margin-top: 40px;
@@ -705,10 +825,6 @@ nav {
   padding: 20px;
   padding-left: 38px;
   font-size: 14px;
-}
-.form--oazks li {
-  /* margin: 0;
-  padding: 0; */
 }
 .form--download {
   display: flex;
@@ -815,6 +931,17 @@ nav {
 }
 .table--akce a::after {
   content: " >";
+}
+.table--members th {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+  color: #2E3440;
+  padding-top: 40px;
+}
+.table--members td:first-child {
+  font-weight: 600;
 }
 
 .footer-background-1 {

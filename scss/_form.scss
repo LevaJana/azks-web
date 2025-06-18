@@ -13,6 +13,12 @@
 
     &__formular {
         padding: 20px;
+
+        &--members {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
     }
 
     &__pole {
@@ -20,24 +26,136 @@
 
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        input, textarea {
+        input, textarea, select {
             display: block;
             width: 100%;
             background-color: white;
             border: 0;
             border-top: 4px solid promenne.$c-hlavni;
             padding: 10px;
+            border-radius: 0;
             font-size: 14px;
             font-family: promenne.$font-hlavni;
             box-shadow: 3px 3px 4px rgba($color: #000000, $alpha: 0.25);
         }
 
+        select, ::picker(select) {
+            appearance: base-select;
+        }
+
+        ::picker(select) {
+            border: none;
+        }
+
+        select {
+            padding: 12px;
+        }
+
+        select::picker-icon {
+            color: promenne.$c-hlavni;
+            transition: 0.4s rotate;
+        }
+
+        select:open::picker-icon {
+            rotate: 180deg;
+        }
+
+        option:hover, option:focus {
+            background-color: promenne.$c-hlavni;
+        }
+
         textarea  {
             min-height: 120px;
             resize: vertical;
+        }
+
+        &--radio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            font-size: 14px;
+
+            .radioinput {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+                &:hover input ~ .checkmark {
+                    background-color: rgba($color: promenne.$c-hlavni, $alpha: 0.25);
+                }
+
+                input:checked ~ .checkmark {
+                background-color: promenne.$c-hlavni;
+                }
+
+                input:checked ~ .checkmark:after {
+                    display: block;
+                }
+
+                .checkmark:after {
+                    top: 2px;
+                    left: 2px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: promenne.$c-vedlejsi;
+                }
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: white;
+                border-radius: 50%;
+                border: 3px solid promenne.$c-hlavni;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+            }
+        }
+
+        &--checkbox {
+            .checkmark {
+                border-radius: 0;
+            }
+
+            .radioinput .checkmark:after {
+                left: 4px;
+                top: 0px;
+                width: 7px;
+                height: 12px;
+                border: solid promenne.$c-vedlejsi;
+                background-color: transparent;
+                border-width: 0 3px 3px 0;
+                border-radius: 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+             }
+
         }
 
     }
@@ -64,11 +182,6 @@
             padding: 20px;
             padding-left: 38px;
             font-size: 14px;
-        }
-
-        li {
-            /* margin: 0;
-            padding: 0; */
         }
     }
 
@@ -156,6 +269,7 @@
     }
 
 }
+
 
 .form-thanks {
     text-align: center;

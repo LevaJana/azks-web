@@ -38,5 +38,18 @@
         }
     }
 
-    
+    &--members {
+        th {
+            font-family: promenne.$font-vedlejsi;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 400;
+            color: promenne.$c-tmavaseda;
+            padding-top: 40px;
+        }
+
+        td:first-child {
+            font-weight: 600;
+        }
+    }
 }

@@ -171,5 +171,14 @@
             }
         }
     }
+
+    &--members {
+        padding: 10px 20px;
+        margin: 40px auto;
+
+        &:hover {
+            padding: 10px 20px;
+        }
+    }
 }
 
