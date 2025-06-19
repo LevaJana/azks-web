@@ -1,3 +1,9 @@
+@mixin pc {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
 $c-hlavni: #F6C441;
 $c-vedlejsi: #4D3A1E;
 $c-tmavaseda: #2E3440;

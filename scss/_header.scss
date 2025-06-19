@@ -1,33 +1,49 @@
 @use 'promenne';
 
 .header {
-    min-height: 400px;
+    min-height: 180px;
     background-color: black;
     background-image: linear-gradient(to bottom, rgba(46, 52, 64, 0.5), rgba(46, 52, 64, 0.5)), url(/images/klice.jpg);
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
+    display: grid;
+    place-content: center;
+
+    @include promenne.pc {
+        min-height: 400px;
+        padding: 50px;
+    }
 
     &__headline {
         text-transform: uppercase;
         color: promenne.$c-hlavni;
-        font-size: 48px;
+        font-size: 28px;
         font-family: promenne.$font-vedlejsi;
         text-align: center;
         line-height: 1.5;
         text-shadow: 5px 5px 10px black;
         display: inline-block;
-        margin: 0 50px 0 0;
+        margin: 0 20px 10px 0;
+
+        @include promenne.pc {
+            font-size: 48px;
+            margin: 0 50px 0 0;
+        }
     }
 
     &__logo {
-        height: 320px;
+        height: 120px;
+
+        @include promenne.pc {
+            height: 320px;
+        }
     }
 
     &--basic {
-        min-height: 110px;
+        min-height: 70px;
         padding: 0;
         background-image: none;
         background-color: promenne.$c-vedlejsi;
@@ -35,12 +51,23 @@
         justify-content: center;
         align-items: center;
 
+        @include promenne.pc {
+            min-height: 110px;
+        }
+
         .header__headline {
-            font-size: 30px;
+            font-size: 24px;
             text-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.5);
             margin-right: 0;
+            margin-bottom: 15px;
             position: relative;
             top: 10px;
+
+            @include promenne.pc {
+                font-size: 30px;
+                top: 10px;
+                margin-bottom: 10px;
+            }
         }
 
         .header__br {
@@ -48,7 +75,11 @@
         }
 
         .header__logo {
-            height: 75px;
+            height: 50px;
+
+            @include promenne.pc {
+                height: 75px;
+            }
         }
 
         .section {

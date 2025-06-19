@@ -6,9 +6,13 @@ html { box-sizing: border-box; }
 body {
     font-family: promenne.$font-hlavni;
     line-height: 1.2;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     margin: 0;
+
+    @include promenne.pc {
+        font-size: 16px;
+    }
 }
 
 .pagewrapper {
@@ -23,21 +27,31 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     color: promenne.$c-tmavaseda;
     margin-top: 0;
+    margin-bottom: 0.66em;
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 25px;
+    font-size: 30px;
+
+    @include promenne.pc {
+        font-size: 36px;
+    }
 }
 
 h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 26px;
+
+    @include promenne.pc {
+        font-size: 30px;
+    }
 }
 
 h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 22px;
+
+    @include promenne.pc {
+        font-size: 24px;
+    }
 }
 
 .h3--basic {
@@ -45,8 +59,11 @@ h3 {
     }
 
 h4 {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 18px;
+
+    @include promenne.pc {
+        font-size: 20px;
+    }
 }
 
 .underline {

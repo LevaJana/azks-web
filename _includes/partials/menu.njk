@@ -1,6 +1,25 @@
 <!-- Začátek menu -->
 
-<nav>
+<nav class="nav">
+    
+    <input type="checkbox" id="nav-checkbox" class="nav__checkbox">
+    <label class="nav__label" for="nav-checkbox">
+        
+        <svg class="nav__icon nav__icon--ham" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.341 38.54">
+            <path d="M4.084 2.606h35.171v5.189H4.085zm0 14.07h35.171v5.189H4.085zm0 14.07h35.171v5.189H4.085z" paint-order="markers fill stroke"/>
+        </svg>
+        <svg class="nav__icon nav__icon--cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.341 38.54">
+            <g paint-order="markers fill stroke">
+                <path d="m7.975 2.685 30.852 29.647-3.595 3.742L4.379 6.427z" />
+                <path d="M35.232 2.685 4.38 32.332l3.595 3.742L38.827 6.426z" />
+            </g>
+        </svg>
+        <span class="nav__menutext">Menu</span>
+
+
+        
+    </label>
+    
     <ul class="menu">
         <li><a class="menu__item" href="/">Úvod</a></li>
         <li><a class="menu__item" href="/aktuality/">Aktuality</a></li>

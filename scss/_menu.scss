@@ -1,42 +1,120 @@
 @use 'promenne';
 
-nav {
+.nav {
     background-color: promenne.$c-tmavaseda;
     color: white;
     position: sticky;
     top: 0;
     z-index: 99;
+
+    &__checkbox {
+        position: absolute;
+        left: -99999px;
+
+        &:checked ~ .nav__label .nav__icon--ham {
+            display: none;
+        }
+
+        &:checked ~ .nav__label .nav__icon--cross {
+            display: inline-block;
+        }
+
+        &:checked ~ .menu {
+            display: flex;
+        }
+    }
+
+    &__label {
+        margin: 15px 20px 10px 20px;
+        display: block;
+
+        @include promenne.pc {
+            display: none;
+        }
+    }
+
+    &__icon {
+        height: 20px;
+        fill: promenne.$c-hlavni;
+
+        &--ham {
+            display: inline-block;
+        }
+
+        &--cross {
+            display: none;
+        }
+    }
+
+    &__menutext {
+        font-size: 20px;
+        position: relative;
+        bottom: 3px;
+        margin-left: 5px;
+    }
 }
+
+
 
 .menu {
     color: white;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 300px;
     list-style: none;
-    display: flex;
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    padding: 0px;
+    background-color: promenne.$c-tmavaseda;
+    position: absolute;
+    margin-top: 0;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+
+    @include promenne.pc {
+        max-width: 1000px;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        background-color: none;
+        position: relative;
+        display: flex;
+        padding: 0 20px;
+        box-shadow: none;
+    }
 
     &__item {
         color: inherit;
         text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        padding: 14px 0 20px 0;
-        border-top: 6px solid transparent;
+        display: block;
+        font-size: 16px;
+        padding: 14px 20px;
+        border-top: 1px solid promenne.$c-hlavni;
         transition: border-top 0.3s;
 
+        @include promenne.pc {
+            display: inline-block;
+            font-size: 20px;
+            padding: 14px 0 20px 0;
+            border-top: 6px solid transparent;
+        }
+
         &:hover, &:focus {
-            border-top: 6px solid promenne.$c-hlavni;
+            border-top: 1px solid promenne.$c-hlavni;
             color: inherit;
+
+            @include promenne.pc {
+                border-top: 6px solid promenne.$c-hlavni;
+            }
         }
 
         &--dropdown {
             font-size: 16px;
             padding: 0;
-            display: inline;
+            display: block;
             border: none;
+
+            @include promenne.pc {
+                display: inline;
+            }
 
             &:hover, &:focus {
             color: promenne.$c-hlavni;
@@ -58,6 +136,12 @@ nav {
             width: 15px;
             height: 15px;  
             margin-left: 8px;
+            position: relative;
+            top: 2px;
+
+            @include promenne.pc {
+                top: 0;
+            }
         }
     }
 }
@@ -66,20 +150,22 @@ nav {
     position: relative;
 
     &__content {
-        /* display: none; */
         max-height: 0;
         display: block;
         overflow: hidden;
-        position: absolute;
         width: max-content;
-        background-image: linear-gradient(to bottom, promenne.$c-tmavaseda, #3c424e 25%);
-        box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
         
         z-index: 100;
         transform: translate(-8px, -15px);
         box-sizing: content-box;
         
         transition: max-height 0.3s ease-in-out;
+
+        @include promenne.pc {
+                position: absolute;
+                background-image: linear-gradient(to bottom, promenne.$c-tmavaseda, #3c424e 25%);
+                box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+            }
     }
 
     &:hover .dropdown__content {
@@ -88,17 +174,31 @@ nav {
 
     &:hover {
          .menu__item--dropdownlink {
-            border-top: 6px solid promenne.$c-hlavni;
+            border-top: 1px solid promenne.$c-hlavni;
+
+            @include promenne.pc {
+                border-top: 6px solid promenne.$c-hlavni;
+            }
         }
     }
 
     &__list {
         list-style-type: square;
-        padding: 17px 21px 12px 31px;
+        padding: 10px 20px 0px 50px;
+        margin-bottom: 0;
+
+        @include promenne.pc {
+            padding: 17px 21px 12px 31px;
+        }
 
         li {
-            margin-bottom: 5px;
-            
+            padding: 5px 0;
+
+            @include promenne.pc {
+                padding: 0;
+                margin-bottom: 5px;
+            }
+
             &::marker {
                 color: promenne.$c-hlavni;
             }
