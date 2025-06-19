@@ -4,9 +4,15 @@
 
 .homepage-boxes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 0 20px 40px 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 0;
+    padding-bottom: 40px;
+
+    @include promenne.pc {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
 }
 
 .homepage-box {
@@ -16,33 +22,50 @@
     background-size: cover;
     background-position: center;
     text-align: center;
-    height: 280px;
+    height: 170px;
     box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
     text-decoration: none;
     position: relative;
+
+    @include promenne.pc {
+        height: 280px;
+    }
 
     &__title {
         color: promenne.$c-vedlejsi;
         padding: 0;
         margin: 0;
-        font-size: 32px;
-        line-height: 1.5;
+        font-size: 24px;
+        line-height: 1.3;
         transition: padding-top 0.3s ease-out;
+
+        @include promenne.pc {
+            font-size: 32px;
+            line-height: 1.5;
+        }
     }
 
     &__content {
         background-color: rgba($color: promenne.$c-hlavni, $alpha: 0.9);
-        padding: 20px 10px;
+        padding: 12px 10px;
         width: 100%;
         position: absolute;
         bottom: 0;
         height: 50%;
         transition: height 0.3s ease-out;
+
+        @include promenne.pc {
+            padding: 20px 10px;
+        }
     }
 
     &:hover {
         .homepage-box__title {
-           padding-top: 78px;
+           padding-top: 50px;
+
+           @include promenne.pc {
+                padding-top: 78px;
+            }
         }
 
         .homepage-box__content {
@@ -55,14 +78,24 @@
 
 .homepage-about {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding-bottom: 40px;
 
+    @include promenne.pc {
+        grid-template-columns: 1fr 1fr;
+    }
+
     &__image {
         width: 100%;
+        max-width: 300px;
         height: 100%;
         object-fit: cover;
+        margin: 0 auto;
+
+        @include promenne.pc {
+            max-width: max-content;
+            margin: 0;
+        }
     }
 }
 
@@ -78,101 +111,16 @@
 
 .slide {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    @include promenne.pc {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
     gap: 20px;
     align-items: center;
 
     img {
         width: 100%;
     }
-}
-
-@include promenne.pc {
-    // 4 boxy s hlavními činnostmi
-
-.homepage-boxes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 0 20px 40px 20px;
-}
-
-.homepage-box {
-    background-color: black;
-    background-image: url(/images/klice-male.jpg);
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 280px;
-    box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
-    text-decoration: none;
-    position: relative;
-
-    &__title {
-        color: promenne.$c-vedlejsi;
-        padding: 0;
-        margin: 0;
-        font-size: 32px;
-        line-height: 1.5;
-        transition: padding-top 0.3s ease-out;
-    }
-
-    &__content {
-        background-color: rgba($color: promenne.$c-hlavni, $alpha: 0.9);
-        padding: 20px 10px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        height: 50%;
-        transition: height 0.3s ease-out;
-    }
-
-    &:hover {
-        .homepage-box__title {
-           padding-top: 78px;
-        }
-
-        .homepage-box__content {
-            height: 100%;
-        }
-    }
-}
-
-// O asociaci
-
-.homepage-about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding-bottom: 40px;
-
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-
-
-
-
-// Čestní členové
-
-.homepage-partners {
-    padding-top: 40px;
-}
-
-.slide {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    align-items: center;
-
-    img {
-        width: 100%;
-    }
-}
-
 }

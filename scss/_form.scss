@@ -16,13 +16,25 @@
 
         &--members {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+
+            @include promenne.pc {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        .grid-2 {
+            gap: 0;
+
+            @include promenne.pc {
+                gap: 20px;
+            }
         }
     }
 
     &__pole {
         margin-bottom: 20px;
+
 
         label {
             display: block;
@@ -74,9 +86,13 @@
 
         &--radio {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             font-size: 14px;
+
+            @include promenne.pc {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
             .radioinput {
                 display: block;
@@ -205,10 +221,14 @@
                 background-color: promenne.$c-tmavaseda;
                 color: white;
                 padding: 10px 20px;
-                font-size: 30px;
+                font-size: 22px;
                 margin: 0;
                 display: flex;
                 align-items: center;
+
+                @include promenne.pc {
+                    font-size: 30px;
+                }
             }
         }
 
@@ -259,8 +279,12 @@
             padding: 15px 20px 10px 20px;
             margin: 0;
             text-align: center;
-            font-size: 20px;
+            font-size: 16px;
             text-transform: uppercase;
+
+            @include promenne.pc {
+                font-size: 20px;
+            }
         }
 
         .form__obsah {

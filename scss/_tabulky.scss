@@ -3,6 +3,7 @@
 .table {
     border-collapse: collapse;
     width: 100%;
+    display: table;
 
     td, th {
         text-align: left;
@@ -18,6 +19,13 @@
     }
 
     &--akce {
+
+        margin-top: 40px;
+
+        @include promenne.pc {
+            margin-top: 0;
+        }
+
         th {
             font-family: promenne.$font-vedlejsi;
             text-transform: uppercase;
@@ -51,4 +59,11 @@
             font-weight: 600;
         }
     }
+}
+
+.responsive-table {
+    overflow-x: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
 }

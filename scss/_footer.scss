@@ -8,23 +8,36 @@
 .footer-up {
     display: grid;
     gap: 20px;
+    text-align: center;
 
     @include promenne.pc {
         grid-template-columns: 3fr 2fr 3fr;
         gap: 30px;
+        text-align: left;
     }
 
     img {
         max-height: 200px;
+        margin-left: auto;
+        margin-right: auto;
 
         @include promenne.pc {
             max-height: 250px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
     &__navigation a {
         display: block;
         width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include promenne.pc {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &__asociation-title {
