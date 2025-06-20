@@ -161,7 +161,7 @@
         margin: 20px auto 0 auto;
         padding: 10px 15px;
 
-            #arrow {
+            .button__icon--arrow {
                 transform: translateY(0px);
                 transition: transform 0.5s;
             }
@@ -170,7 +170,7 @@
             padding: 10px 15px;
             color: white;
             
-            #arrow {
+            .button__icon--arrow {
                 transform: translateY(1.1px);
             }
         }

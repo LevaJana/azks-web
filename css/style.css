@@ -322,6 +322,10 @@ main {
   gap: 20px;
 }
 
+.header-link {
+  text-decoration: none;
+}
+
 .nav {
   background-color: #2E3440;
   color: white;
@@ -661,7 +665,7 @@ main {
   margin: 20px auto 0 auto;
   padding: 10px 15px;
 }
-.button--download #arrow {
+.button--download .button__icon--arrow {
   transform: translateY(0px);
   transition: transform 0.5s;
 }
@@ -669,7 +673,7 @@ main {
   padding: 10px 15px;
   color: white;
 }
-.button--download:hover #arrow {
+.button--download:hover .button__icon--arrow {
   transform: translateY(1.1px);
 }
 .button__icon {
