@@ -2,7 +2,6 @@
 layout: layouts/aktualita.njk
 articletitle: Co se stalo mezi zámečníky a nemluvíme o tom
 autor: Ladislav Kratochvil
-datum: 20/6/2025
 foto: /images/klice-male.jpg
 tags: aktuality
 ---

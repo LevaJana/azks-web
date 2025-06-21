@@ -207,7 +207,7 @@ title: Školení, exkurze a výstavy
   {% for aktualita in collections.aktuality | reverse | limit(6) %}
 
         <div class="news-box">
-            <p class="news-box__date">{{ aktualita.data.datum }}</p>
+            <p class="news-box__date">{{ aktualita.date }}</p>
             <div class="news-box__titlebox"><h3 class="news-box__title">{{ aktualita.data.articletitle }}</h3></div>
             <div class="news-box__content">
                 <p class="news-box__perex">{{ aktualita.content | excerpt400 }}</p>

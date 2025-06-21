@@ -2,7 +2,6 @@
 layout: layouts/aktualita.njk
 articletitle: Členská schůze AZKS 2025
 autor: Ladislav Kratochvil
-datum: 1/2/2025
 foto: /images/klice-male.jpg
 tags: aktuality
 ---

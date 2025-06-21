@@ -2,7 +2,6 @@
 layout: layouts/aktualita.njk
 articletitle: Nějaký úplně jiný nadpis
 autor: Ladislav Kratochvil
-datum: 15/3/2025
 foto: /images/klice-male.jpg
 tags: aktuality
 ---

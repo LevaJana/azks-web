@@ -8,6 +8,11 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("ke-stazeni");
   eleventyConfig.addPassthroughCopy("casopis-zamkar");
 
+  // admin složka pro Netlify CMS
+  eleventyConfig.addPassthroughCopy("admin");
+
+  
+
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
   });

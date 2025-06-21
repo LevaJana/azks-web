@@ -2,7 +2,6 @@
 layout: layouts/aktualita.njk
 articletitle: Vytvořila jsem hezký web, heč
 autor: Jana Levá
-datum: 30/12/2025
 foto: /images/klice-male.jpg
 tags: aktuality
 ---

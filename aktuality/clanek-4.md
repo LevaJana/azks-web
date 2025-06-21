@@ -2,7 +2,6 @@
 layout: layouts/aktualita.njk
 articletitle: Recept na palačinky podle AZKS
 autor: Ladislav Kratochvil
-datum: 30/10/2025
 foto: /images/klice-male.jpg
 tags: aktuality
 ---

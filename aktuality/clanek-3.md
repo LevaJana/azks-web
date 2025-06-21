@@ -2,7 +2,6 @@
 layout: layouts/aktualita.njk
 articletitle: Už mě nic vtipného nenapadá
 autor: Ladislav Kratochvil
-datum: 12/11/2025
 foto: /images/klice-male.jpg
 tags: aktuality
 ---
