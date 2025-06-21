@@ -28,6 +28,11 @@ h1, h2, h3, h4 {
     color: promenne.$c-tmavaseda;
     margin-top: 0;
     margin-bottom: 0.66em;
+    text-align: center;
+
+    @include promenne.pc {
+        text-align: left;
+    }
 }
 
 h1 {
@@ -131,6 +136,10 @@ main {
     &--flex {
         display: flex;
         justify-content: space-between;
+
+        h2 {
+            flex-grow: 1;
+        }
     }
 }
 

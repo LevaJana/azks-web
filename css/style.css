@@ -33,6 +33,12 @@ h1, h2, h3, h4 {
   color: #2E3440;
   margin-top: 0;
   margin-bottom: 0.66em;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  h1, h2, h3, h4 {
+    text-align: left;
+  }
 }
 
 h1 {
@@ -138,6 +144,9 @@ main {
 .section--flex {
   display: flex;
   justify-content: space-between;
+}
+.section--flex h2 {
+  flex-grow: 1;
 }
 
 .grey-wrapper {
@@ -1277,6 +1286,7 @@ main {
   padding: 10px 20px;
   margin: 0;
   flex-grow: 1;
+  text-align: left;
 }
 .form--download .form__head p {
   background-color: #2E3440;
