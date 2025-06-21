@@ -225,13 +225,12 @@
 
 .article {
     padding-top: 20px;
-    column-count: 1;
-    column-gap: 40px; 
-    column-rule: 1px solid promenne.$c-svetlaseda;  
+    display: grid;
+    gap: 15px;
 
     @include promenne.pc {
             padding-top: 50px;
-            column-count: 2;
+            grid-template-columns: minmax(450px, 3fr) minmax(250px, 2fr);
         }
     
     &__foto {
@@ -240,20 +239,30 @@
         object-fit: cover;
         margin: 0 auto;
         display: block;
+        padding-bottom: 15px;
+        border-bottom: 1px solid promenne.$c-svetlaseda;
 
         @include promenne.pc {
+            order: 1;
             max-height: 500px;
             width: 100%;
+            padding-bottom: 0;
+            border-bottom: 0;
+            padding-left: 15px;
+            border-left: 1px solid promenne.$c-svetlaseda;
         }
     }
 
     &__text {
         max-width: 600px;
-        margin: 20px auto 0 auto;
+        margin: 0 auto;
+
+        :first-child {
+            margin-top: 0;
+        }
 
         @include promenne.pc {
-            margin: 0;
-            margin-top: 20px;
+            max-width: max-content;
         }
     }
 

@@ -1063,18 +1063,13 @@ main {
 
 .article {
   padding-top: 20px;
-  -moz-column-count: 1;
-       column-count: 1;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-  -moz-column-rule: 1px solid #C1BFD1;
-       column-rule: 1px solid #C1BFD1;
+  display: grid;
+  gap: 15px;
 }
 @media screen and (min-width: 800px) {
   .article {
     padding-top: 50px;
-    -moz-column-count: 2;
-         column-count: 2;
+    grid-template-columns: minmax(450px, 3fr) minmax(250px, 2fr);
   }
 }
 .article__foto {
@@ -1084,21 +1079,31 @@ main {
      object-fit: cover;
   margin: 0 auto;
   display: block;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #C1BFD1;
 }
 @media screen and (min-width: 800px) {
   .article__foto {
+    order: 1;
     max-height: 500px;
     width: 100%;
+    padding-bottom: 0;
+    border-bottom: 0;
+    padding-left: 15px;
+    border-left: 1px solid #C1BFD1;
   }
 }
 .article__text {
   max-width: 600px;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
+}
+.article__text :first-child {
+  margin-top: 0;
 }
 @media screen and (min-width: 800px) {
   .article__text {
-    margin: 0;
-    margin-top: 20px;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 }
 .article h1, .article h2, .article h3, .article h4 {
