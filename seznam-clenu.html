@@ -136,41 +136,17 @@ title: Seznam členů
             </tr>
         </thead>
         <tbody>
-            <tr><td>AC–T servis, spol. s r.o.</td><td>602&nbsp;395&nbsp;300</td><td>Praha 9</td><td>Vysočina</td></tr>
-            <tr><td>AD SECURITY s. r. o.</td><td>541&nbsp;211&nbsp;988</td><td>Česká</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>AD SECURITY s.r.o.</td><td>602&nbsp;378&nbsp;519</td><td>Kladno</td><td>Hlavní město Praha</td></tr>
-            <tr><td>Adámek Lukáš</td><td>773&nbsp;469&nbsp;909</td><td>Židlochovice</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>ADSAFE, spol. s.r.o.</td><td>703&nbsp;108&nbsp;108</td><td>Praha 6</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>ALCATRAZ Plzeň s.r.o.</td><td>737&nbsp;337&nbsp;734</td><td>Plzeň</td><td>Plzeňský kraj</td></tr>
-            <tr><td>AMBO sdružení</td><td>602&nbsp;945&nbsp;354</td><td>Praha 4</td><td>Plzeňský kraj</td></tr>
-            <tr><td>Asociace českých lockpickerů z.s.</td><td>602&nbsp;945&nbsp;354</td><td>Sokolov</td><td>Plzeňský kraj</td></tr>
-            <tr><td>Asociace technických bezpečnostních služeb Grémium Alarm z. s.</td><td>602&nbsp;945&nbsp;354</td><td>Praha 1</td><td>Plzeňský kraj</td></tr>
-            <tr><td>ASSA ABLOY Czech &amp; Slovakia s.r.o.</td><td>606&nbsp;964&nbsp;597</td><td>Rychnov nad Kněžnou</td><td>Plzeňský kraj</td></tr>
-            <tr><td>ASSA ABLOY Opening Solutions CZ, s. r. o., závod Mul-T-Lock</td><td>601&nbsp;292&nbsp;637</td><td>Praha 8</td><td>Hlavní město Praha</td></tr>
-            <tr><td>Bajer Arnošt Ing.</td><td>608&nbsp;374&nbsp;808</td><td>Brno</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>Bajer Petr ing.</td><td>777&nbsp;319&nbsp;488</td><td>Brno</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>BELA MOST</td><td>777&nbsp;319&nbsp;488</td><td>Most</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>Beneš Josef</td><td>721&nbsp;057&nbsp;905</td><td>Louny</td><td>Ústecký kraj</td></tr>
-            <tr><td>Bezděk Jan</td><td>711&nbsp;177&nbsp;217</td><td>Náchod</td><td>Královéhradecký kraj</td></tr>
-            <tr><td>Bílek Pavel</td><td>737&nbsp;179&nbsp;097</td><td>Most</td><td>Ústecký kraj</td></tr>
-            <tr><td>Bláha Martin</td><td>777&nbsp;605&nbsp;741</td><td>Varnsdorf</td><td>Ústecký kraj</td></tr>
-            <tr><td>Blahák David, Mgr.</td><td>603&nbsp;486&nbsp;048</td><td>Brno</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>Blahák Eduard st.</td><td>603&nbsp;486&nbsp;048</td><td>Brno</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>Blaháková Marcela</td><td>603&nbsp;486&nbsp;048</td><td>Brno</td><td>Jihomoravský kraj</td></tr>
-            <tr><td>Buchbauer Miroslav</td><td>604&nbsp;333&nbsp;985</td><td>Plzeň</td><td>Plzeňský kraj</td></tr>
-            <tr><td>Buk Ivo</td><td>604&nbsp;333&nbsp;985</td><td>Plzeň</td><td>Plzeňský kraj</td></tr>
-            <tr><td>Burian JK s.r.o.</td><td>604&nbsp;550&nbsp;696</td><td>Tachov</td><td>Plzeňský kraj</td></tr>
-            <tr><td>Čápal Ivan</td><td>604&nbsp;550&nbsp;696</td><td>Dobrá Voda</td><td>Jihočeský kraj</td></tr>
-            <tr><td>Cech mechanických zámečnických systémů ČR z.s.</td><td>608&nbsp;472&nbsp;332</td><td>Praha</td><td>Jihočeský kraj</td></tr>
-            <tr><td>Čada Roman</td><td>725&nbsp;941&nbsp;626</td><td>Krnov</td><td>Moravskoslezský kraj</td></tr>
-            <tr><td>Čapek Václav</td><td>777&nbsp;006&nbsp;302</td><td>Třinec</td><td>Moravskoslezský kraj</td></tr>
-            <tr><td>Čegan s.r.o.</td><td>777&nbsp;006&nbsp;332</td><td>Šlapanice</td><td>Plzeňský kraj</td></tr>
-            <tr><td>Čech Luboš</td><td>607&nbsp;112&nbsp;584</td><td>Praha 6</td><td>Jihočeský kraj</td></tr>
-            <tr><td>Červený Martin</td><td>721&nbsp;179&nbsp;204</td><td>okr. Rakovník</td><td>Jihočeský kraj</td></tr>
-            <tr><td>Česká asociace výrobců zámků a stavebního kování – MEZA</td><td>775&nbsp;225&nbsp;194</td><td>Žďár nad Sázavou</td><td>Moravskoslezský kraj</td></tr>
-            <tr><td>Český klub bezpečnostních služeb z.s.</td><td>281&nbsp;860&nbsp;950</td><td>Praha</td><td>Moravskoslezský kraj</td></tr>
-            <tr><td>DANWEISS, spol. s r.o.</td><td>281&nbsp;860&nbsp;950</td><td>Praha 4, Háje</td><td>Hlavní město Praha</td></tr>
-            <tr><td>Dlouhý Milan</td><td>602&nbsp;261&nbsp;442</td><td>Hradec Králové</td><td>Královéhradecký kraj</td></tr>
+
+            {% for clen in seznamclenu %}
+            <tr>
+                <td>{{ clen.firma }}</td>
+                <td>{{ clen.telefon }}</td>
+                <td>{{ clen.mesto }}</td>
+                <td>{{ clen.kraj }}</td>
+            </tr>
+            
+            {% endfor %}
+      
         </tbody>
     </table>
     </div>
