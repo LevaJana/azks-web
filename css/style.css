@@ -767,6 +767,7 @@ main {
 .homepage-box__title {
   color: #4D3A1E;
   padding: 0;
+  text-align: center;
   margin: 0;
   font-size: 24px;
   line-height: 1.3;

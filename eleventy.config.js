@@ -1,3 +1,5 @@
+import { DateTime } from "luxon";
+
 export default async function(eleventyConfig) {
   // Výchozí výstupní složka je: _site
   // Zkopírovat složku images/ do _site/images
@@ -11,7 +13,7 @@ export default async function(eleventyConfig) {
   // admin složka pro Netlify CMS
   eleventyConfig.addPassthroughCopy("admin");
 
-  
+
 
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
@@ -25,6 +27,10 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter("excerpt600", (post) => {
   const content = post.replace(/(<([^>]+)>)/gi, "");
   return content.substr(0, content.lastIndexOf(" ", 600)) + "...";
+  });
+
+ eleventyConfig.addFilter("formatDate", (dateObj, format = "d/L/yyyy") => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format);
   });
 
 }

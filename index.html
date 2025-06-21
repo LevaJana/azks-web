@@ -58,7 +58,7 @@ title: Asociace zámkových a klíčových služeb ČR
         {% for aktualita in collections.aktuality | reverse | limit(3) %}
 
         <div class="news-box">
-            <p class="news-box__date">{{ aktualita.date }}</p>
+            <p class="news-box__date">{{ aktualita.date | formatDate }}</p>
             <div class="news-box__titlebox"><h3 class="news-box__title">{{ aktualita.data.articletitle }}</h3></div>
             <div class="news-box__content">
                 <p class="news-box__perex">{{ aktualita.content | excerpt400 }}</p>
