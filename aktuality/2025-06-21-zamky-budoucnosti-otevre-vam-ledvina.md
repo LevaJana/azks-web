@@ -4,6 +4,7 @@ tags: aktuality
 articletitle: "Zámky budoucnosti: Otevře vám ledvina?"
 date: 2025-06-17T21:09:00.000Z
 autor: Jana Levá
+foto: /images/uploads/ledvina.jpg
 ---
 Asociace zámkových a klíčových služeb ČR se zapojila do mezinárodního výzkumného projektu „BioSecure“, který zkoumá možnosti použití biometrických údajů při odemykání zámků. Po otiscích prstů a skenování oční duhovky přišel na řadu méně tradiční nápad — ověření podle ultrazvuku ledviny.
 
