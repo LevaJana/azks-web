@@ -1,0 +1,30 @@
+---
+layout: layouts/obecna-strana.njk
+title: Aktuality
+---
+
+<div class="headline-wrapper">
+    <div class="section article-head">
+        <div class="article-info">
+            <p class="article-info__date">{{ datum }}</p>
+            <p class="article-info__autor">Autor:<br class="article-info__br">
+            {{ autor }}</p>
+        </div>
+        <h2>{{ articletitle }}</h2>
+    </div>
+</div>
+
+<section class="section article">
+
+    <img class="article__foto" src="{{ foto }}" alt="{{ articletitle }}">
+
+    <div class="article__text">
+    
+        {{ content | safe }} 
+
+    </div>
+</section>
+
+<section class="section">
+    <a href="/aktuality/" class="button button--back button--article">Zpět na všechny aktuality</a>
+</section>

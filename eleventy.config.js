@@ -8,6 +8,20 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("ke-stazeni");
   eleventyConfig.addPassthroughCopy("casopis-zamkar");
 
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+    return arr.slice(0, limit);
+  });
+
+  eleventyConfig.addFilter("excerpt400", (post) => {
+  const content = post.replace(/(<([^>]+)>)/gi, "");
+  return content.substr(0, content.lastIndexOf(" ", 400)) + "...";
+  });
+
+  eleventyConfig.addFilter("excerpt600", (post) => {
+  const content = post.replace(/(<([^>]+)>)/gi, "");
+  return content.substr(0, content.lastIndexOf(" ", 600)) + "...";
+  });
+
 }
 
 export const config = {

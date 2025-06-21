@@ -978,6 +978,7 @@ main {
 
 .article-head {
   position: relative;
+  display: grid;
 }
 .article-head h2 {
   text-align: center;
@@ -990,31 +991,39 @@ main {
 }
 
 .article-info {
-  background-color: #2E3440;
+  background-color: transparent;
   position: relative;
-  color: white;
+  color: rgba(46, 52, 64, 0.7);
   text-align: center;
-  margin-bottom: 25px;
-  padding: 5px 20px;
+  margin-bottom: 0;
+  padding: 10px 20px 0px 20px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  order: 1;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-style: italic;
 }
 @media screen and (min-width: 800px) {
   .article-info {
+    justify-content: space-between;
+    gap: 0;
+    background-color: #2E3440;
+    color: white;
     position: absolute;
     right: 20px;
     top: -60px;
-    margin-bottom: 0;
     padding: 0 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     width: 200px;
     display: block;
+    order: -1;
+    font-style: normal;
   }
 }
 .article-info__date {
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
 }
 @media screen and (min-width: 800px) {
@@ -1031,6 +1040,14 @@ main {
   .article-info__autor {
     font-size: 14px;
     margin: 1em 0;
+  }
+}
+.article-info__br {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .article-info__br {
+    display: inline;
   }
 }
 
@@ -1073,6 +1090,9 @@ main {
     margin: 0;
     margin-top: 20px;
   }
+}
+.article h1, .article h2, .article h3, .article h4 {
+  margin-top: 1.3em;
 }
 
 .form {

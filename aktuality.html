@@ -4,102 +4,27 @@ title: Aktuality
 ---
 
 <section class="section">
+
+    {% for aktualita in collections.aktuality | reverse %}
+
+    <div class="news-box news-box--big">
+        <div class="news-box__head">
+            <p class="news-box__date">{{ aktualita.data.datum }}</p>
+            <div class="news-box__titlebox">
+                <h3 class="news-box__title">{{ aktualita.data.articletitle }}</h3>
+            </div>
+        </div>
+        <div class="news-box__grid">
+            <div class="news-box__content">
+                <p class="news-box__perex">{{ aktualita.content | excerpt600 }}</p>
+                <a class="button button--newsbox" href="{{ aktualita.url }}">Číst dále</a>
+            </div>
+            <img src="{{ aktualita.data.foto }}" alt="{{ aktualita.data.articletitle }}">
+        </div>
+    </div>
+
+    {% endfor %}
         
-    <div class="news-box news-box--big">
-        <div class="news-box__head">
-            <p class="news-box__date">3/5/2025</p>
-            <div class="news-box__titlebox">
-                <h3 class="news-box__title">Členská schůze AZKS 2025</h3>
-            </div>
-        </div>
-        <div class="news-box__grid">
-            <div class="news-box__content">
-                <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15. května 2025 pod záštitou společnosti TOKOZ, v prostorách výrobního závodu ve Žďáru nad Sázavou, Santiniho 20/26 8:45 – 9:30 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a něco malého ke kávě) 9:30 – 10:00 – přesun na výstavu 105 let společnosti TOKOZ na Zámek (je to kousek, cca 10minut pěšky) 10:00 – 11:30 – výstava, posléze návrat do TOKOZ 12:15 – 13:00 – oběd v podnikové jídelně – výběr ze dvou jídel (řízek s bramborem nebo jídlo s rýží – ještě budu upřesňovat);  Od 13:15 začátek VH – po celou dobu bude k dispozici káva, čaj, voda...</p>
-                <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-            </div>
-            <img src="/images/klice.jpg" alt="klíče">
-        </div>
-    </div>
-
-    <div class="news-box news-box--big">
-        <div class="news-box__head">
-            <p class="news-box__date">3/5/2025</p>
-            <div class="news-box__titlebox">
-                <h3 class="news-box__title">Členská schůze AZKS 2025</h3>
-            </div>
-        </div>
-        <div class="news-box__grid">
-            <div class="news-box__content">
-                <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15. května 2025 pod záštitou společnosti TOKOZ, v prostorách výrobního závodu ve Žďáru nad Sázavou, Santiniho 20/26 8:45 – 9:30 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a něco malého ke kávě) 9:30 – 10:00 – přesun na výstavu 105 let společnosti TOKOZ na Zámek (je to kousek, cca 10minut pěšky) 10:00 – 11:30 – výstava, posléze návrat do TOKOZ 12:15 – 13:00 – oběd v podnikové jídelně – výběr ze dvou jídel (řízek s bramborem nebo jídlo s rýží – ještě budu upřesňovat);  Od 13:15 začátek VH – po celou dobu bude k dispozici káva, čaj, voda...</p>
-                <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-            </div>
-            <img src="/images/klice.jpg" alt="klíče">
-        </div>
-    </div>
-
-    <div class="news-box news-box--big">
-        <div class="news-box__head">
-            <p class="news-box__date">3/5/2025</p>
-            <div class="news-box__titlebox">
-                <h3 class="news-box__title">Členská schůze AZKS 2025</h3>
-            </div>
-        </div>
-        <div class="news-box__grid">
-            <div class="news-box__content">
-                <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15. května 2025 pod záštitou společnosti TOKOZ, v prostorách výrobního závodu ve Žďáru nad Sázavou, Santiniho 20/26 8:45 – 9:30 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a něco malého ke kávě) 9:30 – 10:00 – přesun na výstavu 105 let společnosti TOKOZ na Zámek (je to kousek, cca 10minut pěšky) 10:00 – 11:30 – výstava, posléze návrat do TOKOZ 12:15 – 13:00 – oběd v podnikové jídelně – výběr ze dvou jídel (řízek s bramborem nebo jídlo s rýží – ještě budu upřesňovat);  Od 13:15 začátek VH – po celou dobu bude k dispozici káva, čaj, voda...</p>
-                <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-            </div>
-            <img src="/images/klice.jpg" alt="klíče">
-        </div>
-    </div>
-
-    <div class="news-box news-box--big">
-        <div class="news-box__head">
-            <p class="news-box__date">3/5/2025</p>
-            <div class="news-box__titlebox">
-                <h3 class="news-box__title">Členská schůze AZKS 2025</h3>
-            </div>
-        </div>
-        <div class="news-box__grid">
-            <div class="news-box__content">
-                <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15. května 2025 pod záštitou společnosti TOKOZ, v prostorách výrobního závodu ve Žďáru nad Sázavou, Santiniho 20/26 8:45 – 9:30 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a něco malého ke kávě) 9:30 – 10:00 – přesun na výstavu 105 let společnosti TOKOZ na Zámek (je to kousek, cca 10minut pěšky) 10:00 – 11:30 – výstava, posléze návrat do TOKOZ 12:15 – 13:00 – oběd v podnikové jídelně – výběr ze dvou jídel (řízek s bramborem nebo jídlo s rýží – ještě budu upřesňovat);  Od 13:15 začátek VH – po celou dobu bude k dispozici káva, čaj, voda...</p>
-                <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-            </div>
-            <img src="/images/klice.jpg" alt="klíče">
-        </div>
-    </div>
-
-    <div class="news-box news-box--big">
-        <div class="news-box__head">
-            <p class="news-box__date">3/5/2025</p>
-            <div class="news-box__titlebox">
-                <h3 class="news-box__title">Členská schůze AZKS 2025</h3>
-            </div>
-        </div>
-        <div class="news-box__grid">
-            <div class="news-box__content">
-                <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15. května 2025 pod záštitou společnosti TOKOZ, v prostorách výrobního závodu ve Žďáru nad Sázavou, Santiniho 20/26 8:45 – 9:30 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a něco malého ke kávě) 9:30 – 10:00 – přesun na výstavu 105 let společnosti TOKOZ na Zámek (je to kousek, cca 10minut pěšky) 10:00 – 11:30 – výstava, posléze návrat do TOKOZ 12:15 – 13:00 – oběd v podnikové jídelně – výběr ze dvou jídel (řízek s bramborem nebo jídlo s rýží – ještě budu upřesňovat);  Od 13:15 začátek VH – po celou dobu bude k dispozici káva, čaj, voda...</p>
-                <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-            </div>
-            <img src="/images/klice.jpg" alt="klíče">
-        </div>
-    </div>
-
-    <div class="news-box news-box--big">
-        <div class="news-box__head">
-            <p class="news-box__date">3/5/2025</p>
-            <div class="news-box__titlebox">
-                <h3 class="news-box__title">Členská schůze AZKS 2025</h3>
-            </div>
-        </div>
-        <div class="news-box__grid">
-            <div class="news-box__content">
-                <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15. května 2025 pod záštitou společnosti TOKOZ, v prostorách výrobního závodu ve Žďáru nad Sázavou, Santiniho 20/26 8:45 – 9:30 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a něco malého ke kávě) 9:30 – 10:00 – přesun na výstavu 105 let společnosti TOKOZ na Zámek (je to kousek, cca 10minut pěšky) 10:00 – 11:30 – výstava, posléze návrat do TOKOZ 12:15 – 13:00 – oběd v podnikové jídelně – výběr ze dvou jídel (řízek s bramborem nebo jídlo s rýží – ještě budu upřesňovat);  Od 13:15 začátek VH – po celou dobu bude k dispozici káva, čaj, voda...</p>
-                <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-            </div>
-            <img src="/images/klice.jpg" alt="klíče">
-        </div>
-    </div>
 
     <a class="button button--newspage" href="#">Starší novinky</a>
     

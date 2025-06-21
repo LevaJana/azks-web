@@ -53,34 +53,21 @@ title: Asociace zámkových a klíčových služeb ČR
             <a class="button button--home-news1" href="/aktuality/">Další novinky</a>
         </div>
 
-
         <div class="homepage-news-boxes">
-            <div class="news-box">
-                <p class="news-box__date">3/5/2025</p>
-                <div class="news-box__titlebox"><h3 class="news-box__title">Členská schůze schůze AZKS 2025</h3></div>
-                <div class="news-box__content">
-                    <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15.0 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a...</p>
-                    <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-                </div>
-            </div>
 
-            <div class="news-box">
-                <p class="news-box__date">3/5/2025</p>
-                <div class="news-box__titlebox"><h3 class="news-box__title">Členská schůze AZKS 2025</h3></div>
-                <div class="news-box__content">
-                    <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek dne 15.0 – příjezd do TOKOZ – zde bude malé občerstvení, dne 15.0 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a...</p>
-                    <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-                </div>
-            </div>
+        {% for aktualita in collections.aktuality | reverse | limit(3) %}
 
-            <div class="news-box">
-                <p class="news-box__date">3/5/2025</p>
-                <div class="news-box__titlebox"><h3 class="news-box__title">Členská schůze AZKS 2025</h3></div>
-                <div class="news-box__content">
-                    <p class="news-box__perex">Pozvánka na členskou schůzi AZKS, která se bude konat ve čtvrtek, dne 15.0 – příjezd do TOKOZ – zde bude malé občerstvenídne 15.0 – příjezd do TOKOZ – zde bude malé občerstvenídne 15.0 – příjezd do TOKOZ – zde bude malé občerstvení (káva, čaj, voda a...</p>
-                    <a class="button button--newsbox" href="/aktuality/clanek-1/">Číst dále</a>
-                </div>
+        <div class="news-box">
+            <p class="news-box__date">{{ aktualita.data.datum }}</p>
+            <div class="news-box__titlebox"><h3 class="news-box__title">{{ aktualita.data.articletitle }}</h3></div>
+            <div class="news-box__content">
+                <p class="news-box__perex">{{ aktualita.content | excerpt400 }}</p>
+                <a class="button button--newsbox" href="{{ aktualita.url }}">Číst dále</a>
             </div>
+        </div>
+
+        {% endfor %}
+
         </div>
 
         <a class="button button--home-news2" href="/aktuality/">Další novinky</a>
